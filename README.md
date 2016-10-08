@@ -85,7 +85,7 @@ There are a lot of types, but just to get you started:
 ## dealing with strings
 
 String in Rust are a lot more complicated than you might be used to if
-you are coming from another language, in particular, interpretted languages
+you are coming from another language, in particular, interpreted languages
 like Ruby or JavaScript. Here's some key points:
 
 #### `&str` and `String`

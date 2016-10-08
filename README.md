@@ -89,9 +89,9 @@ you are coming from another language, in particular, interpreted languages
 like Ruby or JavaScript. Here's some key points:
 
 #### `&str` and `String`
-- "my string" is not a `String`. it's a `str`, which reads as "static string". the difference
-  is how it is allocated. don't worry about that right now. pretty much always use `str` with
-  an `&`, as `&str`.
+- "my string" is not a `String`. it's a `str`. the difference between the a `String` and a
+  `str` is how they are allocated. don't worry about that right now.
+- pretty much always use `str` with an `&`, as `&str`.
 - You can turn a `&str` into a `String` by using `to_string()` or `String::from()`. You want
   to do this because String has a ton of awesome convenience methods.
 

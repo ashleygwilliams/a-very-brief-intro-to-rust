@@ -1,0 +1,23 @@
+{
+  "name": "a-very-brief-intro-to-rust",
+  "version": "1.0.0",
+  "description": "## install rust",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleygwilliams/a-very-brief-intro-to-rust.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/a-very-brief-intro-to-rust/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/a-very-brief-intro-to-rust#readme",
+  "devDependencies": {
+    "live-server": "^1.1.0"
+  }
+}

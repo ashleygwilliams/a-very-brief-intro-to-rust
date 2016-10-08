@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300,300italic,600,400italic,600italic,700italic,800italic);
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+
+.subtitle {
+  color: #949494;
+}
+
+img {
+  max-width: 100%;
+}
+
+a, a:visited, a:active, a:hover {
+  color: #400AA7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  color: #400AA7;
+  font-weight: 700;
+}
+
+li {
+  text-indent: -1em;
+  margin-left: 0.6em;
+}
+
+/* source */
+h5 {
+  position: absolute;
+  bottom: 10px;
+  font-weight: 400;
+  margin-right: 20px;
+  font-size: 0.5em;
+}
+
+.no {
+  position: absolute;
+  top: -112px;
+  left: 0;
+}

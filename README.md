@@ -57,9 +57,89 @@ fn main() {
 }
 ```
 
-## function signatures
+## storing values
+
+To get started using Rust you'll probably want to assign values so that
+you can use them. To do this in Rust:
+
+```
+let name = "ashley";
+let age = 30;
+```
+
+If you want to make a constant, you must specify a type:
+
+```
+const FAVENUM: u32 = 6;
+```
+
+## types
+
+There are a lot of types, but just to get you started:
+
+- `u32`: unsigned 32-bit integer
+- `i32`: signed 32-bit integer
+- `String` and/or `&str`: more on these below
+- `bool`: a boolean
 
 ## dealing with strings
+
+String in Rust are a lot more complicated than you might be used to if
+you are coming from another language, in particular, interpretted languages
+like Ruby or JavaScript. Here's some key points:
+
+#### `&str` and `String`
+- "my string" is not a `String`. it's a `str`, which reads as "static string". the difference
+  is how it is allocated. don't worry about that right now. pretty much always use `str` with
+  an `&`, as `&str`.
+- You can turn a `&str` into a `String` by using `to_string()` or `String::from()`. You want
+  to do this because String has a ton of awesome convenience methods.
+
+#### concatentation
+
+- add a `&str` to a `String` using `push_str()`
+
+```rust
+let realstring = String::from("hello ");
+let str1 = "world!"
+let message = realstring.push_str(str1);
+```
+
+- add `&str`s using `format!`
+
+```rust
+let str1 = "hello ";
+let str2 = "world!"
+let message = format!("{}{}", str1, str2);
+```
+
+- add a `char` to a `String` using `push()`
+
+```rust
+let realstring = String::from("hello world");
+let char1 = '!''
+let message = realstring.push(char1);
+
+```
+
+#### characters
+
+- a `char` is a different type than a `str` or `String`. `char` is always single quotes.
+- to get a `String`'s `char`s you can call `chars()`
+- you might find that instead of `chars()` you really want `as_bytes()` but if you aren't sure
+  don't sweat it rn
+
+Example:
+
+```rust
+let letters = String::from("ashley").chars();
+
+for l in letters {
+  /// do something cool with characters
+}
+```
+
+## function signatures
 
 ## `println!` and `format!`
 

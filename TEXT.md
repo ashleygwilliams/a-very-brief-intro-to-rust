@@ -270,9 +270,9 @@ fn greeting(name: Option<&str>) -> &str {
   }
   format!("Hello, {}!", who)
 }
-greeting("ashley");
+greeting(Some("ashley"));
 /// "Hello, ashley!"
-greeting();
+greeting(None);
 /// "Hello, World!"
 ```
 

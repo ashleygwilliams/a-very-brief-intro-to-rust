@@ -53,12 +53,13 @@ There are many ways to setup a project in Rust, but this is the simplest.
 2. Clone the repository
 3. `cd` into the repository directory
 4. Type `cargo init .`
+  * Use `--bin` if you are not writing a library
 
 This will create several files and folders for you automatically:
 
 - `Cargo.toml`: metadata about your project and its dependencies
 - `.gitignore`: ignores compiled files built by Rust
-- `src/lib.rs`: where your Rust code goes (change this to `main.rs` if you are not writing a library)
+- `src/lib.rs` or `src/main.rs`: where your Rust code goes
 
 <hr>
 
@@ -74,8 +75,8 @@ code to be used in someone else's application as a crate or module.
 If you want to do this, you should use a `lib.rs`.
 
 If you are writing a <strong>not library</strong>, it means that you'd like
-to write code that compiles into a binary that someone can run. If you 
-want to do this, you need to use a `main.rs`. Inside the `main.rs` you 
+to write code that compiles into a binary that someone can run. If you
+want to do this, you need to use a `main.rs`. Inside the `main.rs` you
 should have a `main` function that looks like this:
 
 ```rust
@@ -205,7 +206,7 @@ println!("hello {}!", "world");
 ```
 
 - `format!` is also a macro. We talked about it before as a way to build `str`s out of
-  `str`s. 
+  `str`s.
 
 ```rust
 format!("my dogs are named: {} and {}", "cheeto", "frito");

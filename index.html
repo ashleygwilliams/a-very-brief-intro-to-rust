@@ -189,7 +189,45 @@ for l in letters {
 ---
 class: middle, left
 
+## macros
 
+Macros are an interesting part of Rust. You know something is a macro if it has
+a `!`. The least technical way to describe the cool thing about Macros is that they
+kinda get compiled twice. Don't worry if that doesn't make any sense.
+
+- `println!` is the equivalent of `console.log` or `puts`. It prints printable things
+  to standard output, which is usually just the console.
+
+```rust
+println!("i get printed on the screen");
+println!("hello {}!", "world");
+```
+
+- `format!` is also a macro. We talked about it before as a way to build `str`s out of
+  `str`s. 
+
+```rust
+format!("my dogs are named: {} and {}", "cheeto", "frito");
+```
+---
+class: middle, left
+
+## function signatures
+
+```rust
+pub fn say_hello(name: &str) -> &str {
+  let message = format!("hello, {}!", name);
+  message
+}
+```
+
+- put `pub` at the beginning if you want the function to be accessible outside the file
+  as in a module or crate
+- the keyword `fn` is how we know it is a function
+- list parameters inside the parans in the style `parameter_name: Type`, separate by commas
+- use the `->` to say what type the function returns
+- return a value from the last line of a function by omitting the semicolon
+- return early in a function using the `return` keyword
 
    </textarea>
     <script src="public/remark.js" type="text/javascript">

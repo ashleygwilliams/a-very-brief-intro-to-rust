@@ -17,6 +17,26 @@ class: middle, center
 ---
 class: middle, left
 
+## links
+
+- web: https://ashleygwilliams.github.io/a-very-brief-intro-to-rust/#1
+- github: https://github.com/ashleygwilliams/a-very-brief-intro-to-rust
+
+### PRs and issues welcome!
+
+made by [@ag_dubs](https://twitter.com/ag_dubs) who is, at best, an advanced beginner in Rust
+---
+class: middle, left
+
+### This guide is an intro to Rust syntax. It doesn't touch on concepts at all.
+
+### Concepts are more important, but sometimes you need a little boost to get to a point where the concepts make sense.
+
+### This is that boost.
+
+---
+class: middle, left
+
 ## install rust
 
 The best way to install Rust is with [rustup](https://www.rustup.rs/). rustup is a Rust
@@ -294,6 +314,50 @@ fn parse_name(name: &str) -> Result<&str, &'static str> {
   }
 }
 ```
+---
+class: middle, left
+
+## testing
+
+Rust has unit testing built in! You can write tests in their own file, or right
+inline with your code.
+
+To designate a test write `#[test]` above a code block with asserts:
+
+```rust
+fn say_hello(name: &str) -> &str {
+  let who = match name {
+    Some(n) => n,
+    None => "World",
+  }
+  format!("Hello, {}!", who)
+}
+
+#[test]
+fn it_should_say_hello() {
+  assert_eq!(say_hello(), "Hello, World!");
+  assert_ne!(say_hello("ashley"), "Hello, World!");
+  assert_eq!(say_hello("ashley"), "Hello, ashley!");
+}
+```
+
+---
+class: middle, left
+
+## good resources
+
+- The Rust Docs, https://doc.rust-lang.org/
+- The Rust Book, https://doc.rust-lang.org/book/
+- The Rust Play Ground, https://play.rust-lang.org/
+- Rust by Example, http://rustbyexample.com/
+- Rust on exercism.io, http://exercism.io/languages/rust
+
+---
+class: middle, center
+
+![ferris](public/img/ferris.png)
+
+# go forth and write some Rust!
 
    </textarea>
     <script src="public/remark.js" type="text/javascript">

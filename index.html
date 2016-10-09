@@ -229,6 +229,72 @@ pub fn say_hello(name: &str) -> &str {
 - return a value from the last line of a function by omitting the semicolon
 - return early in a function using the `return` keyword
 
+---
+class: middle, left
+
+## `match` syntax
+
+Rust has pattern matching and it's great!
+
+```rust
+match animal {
+  "cat" => "Meow",
+  "dog" => "Woof",
+  _ => "<indeciperable>", /// trailing comma!
+}
+```
+
+- `_` is used as a catch-all for anything that doesn't match
+- `match` supports trailing commas, and it's best practice to use them :)
+
+---
+class: middle, left
+
+## the `Option` type
+
+Rust doesn't have `nil`/`null` so if you want to express that something might return
+something or nothing, you need to use the `Option` type.
+
+To write the `Option` type, write the word `Option`, followed by angle brackets with
+a Type inside, e.g. `Option<u32>`.
+
+For example, if a parameter is optional you'd write:
+
+```rust
+fn greeting(name: Option<&str>) -> &str {
+  let who = match name {
+    Some(n) => n,
+    None => "World",
+  }
+  format!("Hello, {}!", who)
+}
+greeting("ashley");
+/// "Hello, ashley!"
+greeting();
+/// "Hello, World!"
+```
+---
+class: middle, left
+
+## the `Result` type
+
+`Result` is kind of like `Option` except instead of something or nothing, you
+expect something that is Ok(`Ok()`) or an error(`Err()`).
+
+To write the `Result` type, write the word `Result`, follow by angle brackets with
+a Type and an Error Type inside, e.g. `Result<u32, &'static str>`.
+
+For example:
+
+```rust
+fn parse_name(name: &str) -> Result<&str, &'static str> {
+  match name {
+    Some(n) => Ok(n),
+    None => Err("You must provide a name."),
+  }
+}
+```
+
    </textarea>
     <script src="public/remark.js" type="text/javascript">
     </script>

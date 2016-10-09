@@ -327,6 +327,7 @@ fn it_should_say_hello() {
 
 - The Rust Docs, https://doc.rust-lang.org/
 - The Rust Book, https://doc.rust-lang.org/book/
+- `into_rust` Screencasts, http://intorust.com/
 - The Rust Play Ground, https://play.rust-lang.org/
 - Rust by Example, http://rustbyexample.com/
 - Rust on exercism.io, http://exercism.io/languages/rust

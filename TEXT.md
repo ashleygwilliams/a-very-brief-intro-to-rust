@@ -226,7 +226,7 @@ pub fn say_hello(name: &str) -> &str {
 - put `pub` at the beginning if you want the function to be accessible outside the file
   as in a module or crate
 - the keyword `fn` is how we know it is a function
-- list parameters inside the parans in the style `parameter_name: Type`, separate by commas
+- list parameters inside the parens in the style `parameter_name: Type`, separate by commas
 - use the `->` to say what type the function returns
 - return a value from the last line of a function by omitting the semicolon
 - return early in a function using the `return` keyword

@@ -331,6 +331,7 @@ fn it_should_say_hello() {
 - The Rust Play Ground, https://play.rust-lang.org/
 - Rust by Example, http://rustbyexample.com/
 - Rust on exercism.io, http://exercism.io/languages/rust
+- New Rustacean Podcast, http://www.newrustacean.com/
 
 <hr>
 

@@ -157,7 +157,7 @@ like Ruby or JavaScript. Here's some key points:
 
 ```rust
 let realstring = String::from("hello ");
-let str1 = "world!"
+let str1 = "world!";
 let message = realstring.push_str(str1);
 ```
 
@@ -165,7 +165,7 @@ let message = realstring.push_str(str1);
 
 ```rust
 let str1 = "hello ";
-let str2 = "world!"
+let str2 = "world!";
 let message = format!("{}{}", str1, str2);
 ```
 
@@ -268,7 +268,7 @@ fn greeting(name: Option<&str>) -> &str {
   let who = match name {
     Some(n) => n,
     None => "World",
-  }
+  };
   format!("Hello, {}!", who)
 }
 greeting(Some("ashley"));
@@ -310,7 +310,7 @@ fn say_hello(name: &str) -> &str {
   let who = match name {
     Some(n) => n,
     None => "World",
-  }
+  };
   format!("Hello, {}!", who)
 }
 

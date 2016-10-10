@@ -316,9 +316,9 @@ fn say_hello(name: &str) -> &str {
 
 #[test]
 fn it_should_say_hello() {
-  assert_eq!(say_hello(), "Hello, World!");
-  assert_ne!(say_hello("ashley"), "Hello, World!");
-  assert_eq!(say_hello("ashley"), "Hello, ashley!");
+  assert_eq!(say_hello(None), "Hello, World!");
+  assert_ne!(say_hello(Some("ashley")), "Hello, World!");
+  assert_eq!(say_hello(Some("ashley")), "Hello, ashley!");
 }
 ```
 

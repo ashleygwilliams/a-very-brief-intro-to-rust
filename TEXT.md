@@ -40,7 +40,7 @@ rustup update
 To check which version of Rust you have type:
 
 ```
-rustc -- version
+rustc --version
 ```
 
 <hr>

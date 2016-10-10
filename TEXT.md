@@ -288,7 +288,7 @@ To write the `Result` type, write the word `Result`, follow by angle brackets wi
 a Type and an Error Type inside, e.g. `Result<u32, &'static str>`. For example:
 
 ```rust
-fn parse_name(name: &str) -> Result<&str, &'static str> {
+fn parse_name(name: Option<&str>) -> Result<&str, &'static str> {
   match name {
     Some(n) => Ok(n),
     None => Err("You must provide a name."),

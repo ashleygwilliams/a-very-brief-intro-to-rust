@@ -98,7 +98,7 @@ should have a `main` function that looks like this:
 
 ```rust
 fn main() {
-  /// your app code goes here
+  // your app code goes here
 }
 ```
 ---
@@ -203,7 +203,7 @@ Example:
 let letters = String::from("ashley").chars();
 
 for l in letters {
-  /// do something cool with characters
+  // do something cool with characters
 }
 ```
 
@@ -261,7 +261,7 @@ Rust has pattern matching and it's great!
 match animal {
   "cat" => "Meow",
   "dog" => "Woof",
-  _ => "<indeciperable>", /// trailing comma!
+  _ => "<indeciperable>", // trailing comma!
 }
 ```
 
@@ -290,9 +290,9 @@ fn greeting(name: Option<&str>) -> &str {
   format!("Hello, {}!", who)
 }
 greeting(Some("ashley"));
-/// "Hello, ashley!"
+// "Hello, ashley!"
 greeting(None);
-/// "Hello, World!"
+// "Hello, World!"
 ```
 ---
 class: middle, left

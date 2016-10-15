@@ -237,7 +237,7 @@ class: middle, left
 ## function signatures
 
 ```rust
-pub fn say_hello(name: &str) -> &str {
+pub fn say_hello(name: &str) -> String {
   let message = format!("hello, {}!", name);
   message
 }
@@ -327,7 +327,7 @@ inline with your code.
 To designate a test write `#[test]` above a code block with asserts:
 
 ```rust
-fn say_hello(name: &str) -> &str {
+fn say_hello(name: &str) -> String {
   let who = match name {
     Some(n) => n,
     None => "World",

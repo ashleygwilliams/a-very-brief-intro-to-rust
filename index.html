@@ -337,9 +337,9 @@ fn say_hello(name: &str) -> String {
 
 #[test]
 fn it_should_say_hello() {
-  assert_eq!(say_hello(None), "Hello, World!");
-  assert_ne!(say_hello(Some("ashley")), "Hello, World!");
-  assert_eq!(say_hello(Some("ashley")), "Hello, ashley!");
+  assert_eq!(say_hello(None), String::from("Hello, World!"));
+  assert_eq!(say_hello(Some("World")), String::from("Hello, World!"));
+  assert_eq!(say_hello(Some("ashley")), String::from(("Hello, ashley!"));
 }
 ```
 

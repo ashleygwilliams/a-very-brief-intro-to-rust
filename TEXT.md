@@ -156,9 +156,9 @@ like Ruby or JavaScript. Here's some key points:
 - add a `&str` to a `String` using `push_str()`
 
 ```rust
-let realstring = String::from("hello ");
+let mut realstring = String::from("hello ");
 let str1 = "world!";
-let message = realstring.push_str(str1);
+realstring.push_str(str1);
 ```
 
 - add `&str`s using `format!`
@@ -181,7 +181,8 @@ let message = format!("{}{}", str1, str2);
 Example:
 
 ```rust
-let letters = String::from("ashley").chars();
+let name = String::from("ashley");
+let letters = name.chars();
 
 for l in letters {
   // do something cool with characters
@@ -218,7 +219,7 @@ format!("my dogs are named: {} and {}", "cheeto", "frito");
 ## function signatures
 
 ```rust
-pub fn say_hello(name: &str) -> &str {
+pub fn say_hello(name: &str) -> String {
   let message = format!("hello, {}!", name);
   message
 }
@@ -264,7 +265,7 @@ a Type inside, e.g. `Option<u32>`.
 For example, if a parameter is optional you'd write:
 
 ```rust
-fn greeting(name: Option<&str>) -> &str {
+fn greeting(name: Option<&str>) -> String {
   let who = match name {
     Some(n) => n,
     None => "World",
@@ -306,7 +307,7 @@ inline with your code.
 To designate a test write `#[test]` above a code block with asserts:
 
 ```rust
-fn say_hello(name: &str) -> &str {
+fn say_hello(name: &str) -> String {
   let who = match name {
     Some(n) => n,
     None => "World",
@@ -316,9 +317,9 @@ fn say_hello(name: &str) -> &str {
 
 #[test]
 fn it_should_say_hello() {
-  assert_eq!(say_hello(None), "Hello, World!");
-  assert_ne!(say_hello(Some("ashley")), "Hello, World!");
-  assert_eq!(say_hello(Some("ashley")), "Hello, ashley!");
+  assert_eq!(say_hello(None), String::from("Hello, World!"));
+  assert_eq!(say_hello(Some("World")), String::from("Hello, World!"));
+  assert_eq!(say_hello(Some("ashley")), String::from(("Hello, ashley!"));
 }
 ```
 

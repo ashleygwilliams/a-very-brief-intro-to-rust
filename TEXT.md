@@ -151,7 +151,7 @@ like Ruby or JavaScript. Here's some key points:
 <hr>
 
 
-## concatentation
+## concatenation
 
 - add a `&str` to a `String` using `push_str()`
 

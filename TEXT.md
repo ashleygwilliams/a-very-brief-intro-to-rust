@@ -100,7 +100,7 @@ use Cargo to install and manage bits of other people's code.
 - A package in Rust is called a Crate.
 - You can find Crates on http://crates.io
 - You list the Crates you want to use in the `Cargo.toml` file
-- You app keeps track of what crates you are using in the `Cargo.lock` file
+- Your app keeps track of what crates you are using in the `Cargo.lock` file
 
 <hr>
 
